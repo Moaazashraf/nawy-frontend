@@ -21,10 +21,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+
     .primary_heading {
       color: white;
       text-transform: uppercase;
       text-align: center;
+      overflow: hidden;
+
       .primary_heading__main {
         display: block;
         letter-spacing: 3.5rem;
@@ -94,6 +97,7 @@
     }
   }
 }
+
 @keyframes moveToRight {
   0% {
     opacity: 0;

@@ -29,6 +29,7 @@ function Apartments() {
 
   return (
     <div className={styles.container}>
+      <button onClick={() => router.back()}>back</button>
       {apartment && (
         <div className={styles.apartment_container} key={apartment.id}>
           <p>Bathrooms : {apartment.bathrooms}</p>
