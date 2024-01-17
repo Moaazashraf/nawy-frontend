@@ -1,0 +1,140 @@
+.container {
+  height: 100vh;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(126, 213, 111, 0.84),
+    rgba(40, 180, 133, 0.815)
+  );
+  background-position: top;
+  position: relative;
+
+  .img_box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 3rem;
+  }
+
+  .text_box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    .primary_heading {
+      color: white;
+      text-transform: uppercase;
+      text-align: center;
+      .primary_heading__main {
+        display: block;
+        letter-spacing: 3.5rem;
+        font-size: 6rem;
+        animation-name: moveToRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+      }
+
+      .primary_heading__sub {
+        display: block;
+        letter-spacing: 1.75rem;
+        font-weight: 700;
+        font-size: 2rem;
+        animation-name: moveToLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        margin-bottom: 4rem;
+      }
+    }
+
+    .btn:link,
+    .btn:visited {
+      display: inline-block;
+      text-decoration: none;
+      padding: 1.5rem 4rem;
+      text-transform: uppercase;
+      border-radius: 10rem;
+      transition: all 0.2s;
+      position: relative;
+      animation: moveFromBottom 1s ease-out;
+      font-size: 1.6rem;
+    }
+
+    .btn:hover {
+      transform: translateY(-0.3rem);
+      box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+    }
+
+    .btn:active {
+      transform: translateY(-0.1rem);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    }
+
+    .btn::after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transition: all 0.4s;
+      left: 0;
+      top: 0;
+      border-radius: 10rem;
+      z-index: -3;
+    }
+
+    .btn__white,
+    .btn__white::after {
+      background-color: white;
+      color: #777;
+    }
+
+    .btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+}
+@keyframes moveToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(34rem);
+  }
+
+  80% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

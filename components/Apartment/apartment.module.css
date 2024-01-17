@@ -1,0 +1,15 @@
+.container {
+  min-height: 100vh;
+  padding: 3rem;
+  background-color: rgba(213, 248, 237, 0.815);
+
+  .apartment_container {
+    background-color: white;
+    border-radius: 1rem;
+    border: 0.1rem solid #777;
+    padding: 4rem 3rem;
+
+    font-size: 1.8rem;
+    position: relative;
+  }
+}
